@@ -1,0 +1,21 @@
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=32m; support was removed in 8.0
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=256m; support was removed in 8.0
+2019-01-24 20:26:40.128/0.946 Oracle Coherence 12.2.1.2.0 <Info> (thread=main, member=n/a): Loaded operational configuration from "jar:file:/app/oracle/SOASuite12.2.1.2/Oracle_Home/coherence/lib/coherence.jar!/tangosol-coherence.xml"
+2019-01-24 20:26:40.161/0.979 Oracle Coherence 12.2.1.2.0 <Info> (thread=main, member=n/a): Loaded operational overrides from "jar:file:/app/oracle/SOASuite12.2.1.2/Oracle_Home/coherence/lib/coherence.jar!/tangosol-coherence-override-dev.xml"
+2019-01-24 20:26:40.162/0.980 Oracle Coherence 12.2.1.2.0 <D5> (thread=main, member=n/a): Optional configuration override "/tangosol-coherence-override.xml" is not specified
+2019-01-24 20:26:40.163/0.982 Oracle Coherence 12.2.1.2.0 <D5> (thread=main, member=n/a): Optional configuration override "cache-factory-config.xml" is not specified
+2019-01-24 20:26:40.164/0.982 Oracle Coherence 12.2.1.2.0 <D5> (thread=main, member=n/a): Optional configuration override "cache-factory-builder-config.xml" is not specified
+2019-01-24 20:26:40.165/0.983 Oracle Coherence 12.2.1.2.0 <D5> (thread=main, member=n/a): Optional configuration override "/custom-mbeans.xml" is not specified
+
+Oracle Coherence Version 12.2.1.2.0 Build 65221
+ Grid Edition: Development mode
+Copyright (c) 2000, 2016, Oracle and/or its affiliates. All rights reserved.
+
+2019-01-24 20:26:40.253/1.071 Oracle Coherence GE 12.2.1.2.0 <Info> (thread=main, member=n/a): Created cache factory com.tangosol.net.DefaultConfigurableCacheFactory
+2019-01-24 20:26:40.393/1.211 Oracle Coherence GE 12.2.1.2.0 <Info> (thread=main, member=n/a): The cluster name has not been configured, a value of "leonardo's cluster" has been automatically generated
+jan 24, 2019 8:26:40 PM oracle.dms.instrument.Noun findOrCreateByPath
+ADVERTÊNCIA: Tentativa de criar um nome /DMS-Internal preexistente, do tipo n/a, com um tipo de conflito n/d.
+jan 24, 2019 8:26:40 PM oracle.soa.scac.ValidateComposite loadWSDLs
+ADVERTÊNCIA: Validating WSDLs from WSDLManager....  with option UseSoaInfraMds:false
+jan 24, 2019 8:26:40 PM oracle.fabric.common.wsdl.SchemaManager isIncrementalBuildSupported
+INFORMAÇÕES: XMLSchema incremental build enabled.

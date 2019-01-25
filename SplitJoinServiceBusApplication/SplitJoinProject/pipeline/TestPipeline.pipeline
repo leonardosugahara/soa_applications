@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:pipelineEntry xmlns:con="http://www.bea.com/wli/sb/pipeline/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:coreEntry>
+        <con:binding type="SOAP" isSoap12="false" xsi:type="con:SoapBindingType">
+            <con:wsdl ref="SplitJoinProject/wsdl/PipelineContract"/>
+            <con:binding>
+                <con:name>execute_bind</con:name>
+                <con:namespace>http://xmlns.oracle.com/SplitJoinServiceBusApplication/SplitJoinProject/PipelineContract</con:namespace>
+            </con:binding>
+        </con:binding>
+        <con:xqConfiguration>
+            <con:snippetVersion>1.0</con:snippetVersion>
+        </con:xqConfiguration>
+    </con:coreEntry>
+    <con:router>
+        <con:pipeline type="request" name="request-7f000101.N2a4ac94c.0.168824f2024.N7ff3">
+            <con:stage id="_StageId-7f000101.N2a4ac94c.0.168824f2024.N7ff1" name="Stage1">
+                <con:context/>
+                <con:actions>
+                    <con1:wsCallout xmlns:con1="http://www.bea.com/wli/sb/stages/transform/config">
+                        <con2:id xmlns:con2="http://www.bea.com/wli/sb/stages/config">_ActionId-7f000101.N2a4ac94c.0.168824f2024.N7fed</con2:id>
+                        <con1:service ref="SplitJoinProject/business/BusinessServiceA" xsi:type="ref:BusinessServiceRef" xmlns:ref="http://www.bea.com/wli/sb/reference"/>
+                        <con1:operation>process</con1:operation>
+                        <con1:request>
+                            <con1:body wrapped="false">bpelprocessaRequest</con1:body>
+                        </con1:request>
+                        <con1:response>
+                            <con1:body wrapped="false">bpelprocessaResponse</con1:body>
+                        </con1:response>
+                        <con1:requestTransform>
+                            <con1:assign varName="bpelprocessaRequest">
+                                <con2:id xmlns:con2="http://www.bea.com/wli/sb/stages/config">_ActionId-7f000101.N2a4ac94c.0.168824f2024.N7fe4</con2:id>
+                                <con1:expr>
+                                    <con2:xqueryText xmlns:con2="http://www.bea.com/wli/sb/stages/config">&lt;ns1:process xmlns:ns1="http://xmlns.oracle.com/SplitJoinSOAApplication/ProjectA/BPELProcessA">
+            			&lt;ns1:input>A&lt;/ns1:input>
+        &lt;/ns1:process></con2:xqueryText>
+                                </con1:expr>
+                            </con1:assign>
+                        </con1:requestTransform>
+                        <con1:responseTransform/>
+                    </con1:wsCallout>
+                    <con1:wsCallout xmlns:con1="http://www.bea.com/wli/sb/stages/transform/config">
+                        <con2:id xmlns:con2="http://www.bea.com/wli/sb/stages/config">_ActionId-7f000101.N2a4ac94c.0.168824f2024.N7fea</con2:id>
+                        <con1:service ref="SplitJoinProject/business/BusinessServiceB" xsi:type="ref:BusinessServiceRef" xmlns:ref="http://www.bea.com/wli/sb/reference"/>
+                        <con1:operation>process</con1:operation>
+                        <con1:request>
+                            <con1:body wrapped="false">bpelprocessbRequest</con1:body>
+                        </con1:request>
+                        <con1:response>
+                            <con1:body wrapped="false">bpelprocessbResponse</con1:body>
+                        </con1:response>
+                        <con1:requestTransform>
+                            <con1:assign varName="bpelprocessbRequest">
+                                <con2:id xmlns:con2="http://www.bea.com/wli/sb/stages/config">_ActionId-7f000101.N2a4ac94c.0.168824f2024.N7fe1</con2:id>
+                                <con1:expr>
+                                    <con2:xqueryText xmlns:con2="http://www.bea.com/wli/sb/stages/config">&lt;ns1:process xmlns:ns1="http://xmlns.oracle.com/SplitJoinSOAApplication/ProjectB/BPELProcessB">
+            			&lt;ns1:input>B&lt;/ns1:input>
+        &lt;/ns1:process></con2:xqueryText>
+                                </con1:expr>
+                            </con1:assign>
+                        </con1:requestTransform>
+                        <con1:responseTransform/>
+                    </con1:wsCallout>
+                    <con1:wsCallout xmlns:con1="http://www.bea.com/wli/sb/stages/transform/config">
+                        <con2:id xmlns:con2="http://www.bea.com/wli/sb/stages/config">_ActionId-7f000101.N2a4ac94c.0.168824f2024.N7fe7</con2:id>
+                        <con1:service ref="SplitJoinProject/business/BusinessServiceC" xsi:type="ref:BusinessServiceRef" xmlns:ref="http://www.bea.com/wli/sb/reference"/>
+                        <con1:operation>process</con1:operation>
+                        <con1:request>
+                            <con1:body wrapped="false">bpelprocesscRequest</con1:body>
+                        </con1:request>
+                        <con1:response>
+                            <con1:body wrapped="false">bpelprocesscResponse</con1:body>
+                        </con1:response>
+                        <con1:requestTransform>
+                            <con1:assign varName="bpelprocesscRequest">
+                                <con2:id xmlns:con2="http://www.bea.com/wli/sb/stages/config">_ActionId-7f000101.N2a4ac94c.0.168824f2024.N7fde</con2:id>
+                                <con1:expr>
+                                    <con2:xqueryText xmlns:con2="http://www.bea.com/wli/sb/stages/config">&lt;ns1:process xmlns:ns1="http://xmlns.oracle.com/SplitJoinSOAApplication/ProjectC/BPELProcessC">
+            			&lt;ns1:input>C&lt;/ns1:input>
+        &lt;/ns1:process></con2:xqueryText>
+                                </con1:expr>
+                            </con1:assign>
+                        </con1:requestTransform>
+                        <con1:responseTransform/>
+                    </con1:wsCallout>
+                </con:actions>
+            </con:stage>
+        </con:pipeline>
+        <con:pipeline type="response" name="response-7f000101.N2a4ac94c.0.168824f2024.N7ff2">
+            <con:stage id="_StageId-7f000101.N2a4ac94c.0.168824f2024.N7ff0" name="Stage1">
+                <con:context/>
+                <con:actions>
+                    <con1:replace varName="body" contents-only="true" xmlns:con1="http://www.bea.com/wli/sb/stages/transform/config">
+                        <con2:id xmlns:con2="http://www.bea.com/wli/sb/stages/config">_ActionId-7f000101.N2a4ac94c.0.168824f2024.N7fd8</con2:id>
+                        <con1:location>
+                            <con2:xpathText xmlns:con2="http://www.bea.com/wli/sb/stages/config">.</con2:xpathText>
+                        </con1:location>
+                        <con1:expr>
+                            <con2:xqueryTransform xmlns:con2="http://www.bea.com/wli/sb/stages/config">
+                                <con2:resource ref="SplitJoinProject/xquery/pipeline"/>
+                                <con2:param name="bpelprocesscResponse">
+                                    <con2:path>$bpelprocesscResponse</con2:path>
+                                </con2:param>
+                                <con2:param name="bpelprocessaResponse">
+                                    <con2:path>$bpelprocessaResponse</con2:path>
+                                </con2:param>
+                                <con2:param name="bpelprocessbResponse">
+                                    <con2:path>$bpelprocessbResponse</con2:path>
+                                </con2:param>
+                            </con2:xqueryTransform>
+                        </con1:expr>
+                    </con1:replace>
+                </con:actions>
+            </con:stage>
+        </con:pipeline>
+        <con:flow>
+            <con:pipeline-node name="Pipeline Pair Node1">
+                <con:request>request-7f000101.N2a4ac94c.0.168824f2024.N7ff3</con:request>
+                <con:response>response-7f000101.N2a4ac94c.0.168824f2024.N7ff2</con:response>
+            </con:pipeline-node>
+        </con:flow>
+    </con:router>
+</con:pipelineEntry>

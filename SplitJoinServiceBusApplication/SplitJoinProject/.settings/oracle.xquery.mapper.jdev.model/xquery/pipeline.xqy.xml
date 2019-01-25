@@ -1,0 +1,6 @@
+<view_states>
+   <function arity="3" name="prepareResponse">
+      <source_tree_view last.visible.row="5" last.visible.path="/sourceRoot[[0]]/processResponse[[2]]/result[[0]]" first.visible.path="/sourceRoot[[0]]/processResponse[[0]]" expanded.paths="/sourceRoot[[0]]/processResponse[[0]]&#xA;/sourceRoot[[0]]/processResponse[[1]]&#xA;/sourceRoot[[0]]/processResponse[[2]]" first.visible.row="0" selected.paths="/sourceRoot[[0]]/processResponse[[2]]/result[[0]]"/>
+      <target_tree_view last.visible.row="3" last.visible.path="/TargetRoot[[0]]/result[[0]]/resultBPELProcessC[[2]]" first.visible.path="/TargetRoot[[0]]/result[[0]]" expanded.paths="/TargetRoot[[0]]/result[[0]]" first.visible.row="0" selected.paths="/TargetRoot[[0]]/result[[0]]/resultBPELProcessC[[2]]"/>
+   </function>
+</view_states>
